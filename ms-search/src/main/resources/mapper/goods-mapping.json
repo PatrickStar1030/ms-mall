@@ -1,0 +1,16 @@
+{
+  "properties":{
+    "all": {
+      "type": "text",
+      "analyzer": "ik_max_word"
+    },
+    "subTitle": {
+      "type": "keyword",
+      "index": false
+    },
+    "skus":{
+      "type": "keyword",
+      "index": false
+    }
+  }
+}

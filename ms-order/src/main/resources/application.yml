@@ -1,0 +1,39 @@
+server:
+  port: 8089
+spring:
+  application:
+    name: order-service
+  datasource:
+    url: jdbc:mysql://127.0.0.1/ms_mall?serverTimezone=GMT%2B8
+    hikari:
+      username: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      minimum-idle: 5
+      maximum-pool-size: 20
+  main:
+    allow-bean-definition-overriding: true
+  rabbitmq:
+    host: 192.168.56.130
+    virtual-host: /mall
+    username: mall
+    password: mall
+
+eureka:
+  client:
+    service-url:
+      default-Zone: http://127.0.0.1:10086/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}@${spring.cloud.client.ip-address}@${server.port}
+    ip-address: 127.0.0.1
+    lease-renewal-interval-in-seconds: 3
+    lease-expiration-duration-in-seconds: 10
+mybatis:
+  type-aliases-package: com.dilemma.item.pojo
+  mapper-locations: mapper/OrderMapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
+mapper:
+  not-empty: false
+  identity: mysql
