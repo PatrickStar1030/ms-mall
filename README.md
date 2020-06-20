@@ -1,2 +1,2 @@
-Spring cloud demo (Netflix)
+Spring cloud demo (Netflix Component)
 
