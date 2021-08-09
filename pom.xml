@@ -40,7 +40,7 @@
         <pageHelper.starter.version>1.2.5</pageHelper.starter.version>
         <dilemma.latest.version>1.0.0-SNAPSHOT</dilemma.latest.version>
         <fastDFS.client.version>1.26.1-RELEASE</fastDFS.client.version>
-        <elasticsearch.client.version>7.5.1</elasticsearch.client.version>
+        <elasticsearch.client.version>7.13.3</elasticsearch.client.version>
         <data.redis.version>2.2.2.RELEASE</data.redis.version>
     </properties>
 
